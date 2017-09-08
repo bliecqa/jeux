@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="551.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.Main">
+<VBox alignment="TOP_CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="574.0" prefWidth="551.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="jeux.Main">
    <children>
       <VBox prefHeight="82.0" prefWidth="551.0">
          <children>
@@ -19,12 +19,12 @@
       </VBox>
       <VBox alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="498.0" prefWidth="551.0" spacing="10.0" style="-fx-background-color: #DCE0DE;">
          <children>
-            <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="175.0" text="MORPION" textFill="#c3c165">
+            <Button fx:id="morpion" mnemonicParsing="false" onAction="#onMorpionPressed" prefHeight="57.0" prefWidth="175.0" text="MORPION" textFill="#c3c165">
                <font>
                   <Font name="AR DARLING" size="17.0" />
                </font>
             </Button>
-            <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="175.0" text="MORPION" textFill="#c3c165">
+            <Button fx:id="snake" mnemonicParsing="false" onAction="#onSnakePressed" prefHeight="57.0" prefWidth="175.0" text="SNAKE" textFill="#c3c165">
                <font>
                   <Font name="AR DARLING" size="17.0" />
                </font>
