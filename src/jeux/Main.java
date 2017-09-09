@@ -11,6 +11,7 @@ import javafx.stage.Stage;
 
 public class Main extends Application{
 	static Stage stage;
+	static Scene menu;
 	Jeu jeu;
 	@FXML
 	Button morpion,snake;
@@ -23,8 +24,8 @@ public class Main extends Application{
 	public void start(Stage stage) throws Exception {
 		Parent root=FXMLLoader.load(getClass().getResource("Main.fxml"));;
 		this.stage=stage;
-		Scene scene=new Scene(root);
-		this.stage.setScene(scene);
+		menu=new Scene(root);
+		this.stage.setScene(menu);
 		this.stage.show();
 	}
 
@@ -32,15 +33,18 @@ public class Main extends Application{
 	@FXML
 	public void onMorpionPressed(){
 		System.out.println("Morpion sélectionné");
-		jeu=new Morpion();
-		Scene gameMorpion=new Scene((Morpion)jeu);
-		
+		jeu=new Morpion(stage,menu);
+		Scene gameMorpion=new Scene(jeu);
 		stage.setScene(gameMorpion);
-		
 	}
 	
 	@FXML
 	public void onSnakePressed(){
-		
+		System.out.println("Snake sélectionné");
+		jeu=new Snake();
+		Scene gameSnake=new Scene(jeu);
+		stage.setX(300);
+		stage.setY(0);
+		stage.setScene(gameSnake);
 	}
 }
