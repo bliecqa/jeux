@@ -9,6 +9,7 @@ import javafx.scene.control.Alert.AlertType;
 import javafx.scene.control.Button;
 import javafx.scene.control.ButtonType;
 import javafx.scene.control.Label;
+import javafx.scene.input.KeyCode;
 import javafx.scene.layout.HBox;
 import javafx.scene.layout.StackPane;
 import javafx.scene.paint.Color;
@@ -22,7 +23,6 @@ public class Morpion extends Jeu {
 	Stage stage;
 	Scene menu;
 	boolean joueur = true;
-	HBox bottom = new HBox();
 	Button quitter = new Button("QUITTER");
 	Label label = new Label("Resultat : ");
 	Cell[][] cells = new Cell[3][3];
@@ -32,7 +32,6 @@ public class Morpion extends Jeu {
 		menu = sc;
 		setPrefSize(600, 700);
 		label.setTextFill(Color.BLACK);
-
 		for (int i = 0; i < 3; i++) {
 			for (int j = 0; j < 3; j++) {
 				Cell c = new Cell();
