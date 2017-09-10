@@ -14,7 +14,7 @@ public class Main extends Application{
 	static Scene menu;
 	Jeu jeu;
 	@FXML
-	Button morpion,plusMoins;
+	Button morpion,snake;
 	
 	public static void main(String[] args) {
 		launch(args);
@@ -41,12 +41,15 @@ public class Main extends Application{
 	}
 	
 	@FXML
-	public void onPlusMoinsPressed(){
+	public void onSnakePressed(){
 		stage.close();
 		System.out.println("+ OU - sélectionné");
-		jeu=new PlusMoins(stage,menu);
-		Scene gamePlusMoins=new Scene(jeu);
-		stage.setScene(gamePlusMoins);
+		jeu=new Snake(stage,menu);
+		Scene gameSnake=new Scene(jeu);
+		stage.setX(300);
+		stage.setY(0);
+		gameSnake.setOnKeyPressed((Snake)jeu);
+		stage.setScene(gameSnake);
 		stage.show();
 	}
 }

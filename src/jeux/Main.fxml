@@ -24,7 +24,12 @@
                   <Font name="AR DARLING" size="17.0" />
                </font>
             </Button>
-            <Button fx:id="plusMoins" mnemonicParsing="false" onAction="#onPlusMoinsPressed" prefHeight="57.0" prefWidth="175.0" text="+ OU -" textFill="#c3c165">
+            <Button fx:id="snake" mnemonicParsing="false" onAction="#onSnakePressed" prefHeight="57.0" prefWidth="175.0" text="SNAKE" textFill="#c3c165">
+               <font>
+                  <Font name="AR DARLING" size="17.0" />
+               </font>
+            </Button>
+            <Button mnemonicParsing="false" prefHeight="57.0" prefWidth="175.0" text="+ OU -" textFill="#c3c165">
                <font>
                   <Font name="AR DARLING" size="17.0" />
                </font>
